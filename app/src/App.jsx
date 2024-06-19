@@ -3,9 +3,16 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
-  const [books, setBooks] = useState([]);
-  const [favorites, setFavorites] = useState([]);
+  const [books, setBooks] = useState([]); // Books initialized as an empty array. Holds a list of books with their respective details.
+  const [favorites, setFavorites] = useState([]); // Favorites initialized as an empty array. Holds the list of books that the user has marked as favorites.
 
+  // Purpose of this function: fetching data from the books.json.
+  // useEffect runs after the first render of the page.
+  // Fetches (AKA  gets the data) from books.json.
+  // Data gives you back the result of the fetch operation.
+  // Returns a copy of a part of the array, in this case from index 0 to 20.
+  // This new sliced array is used to update books in the state variable on top.
+  // [] ensures the function runs only once.
   useEffect(() => {
     fetch("/books.json")
       .then((response) => response.json())
@@ -17,12 +24,28 @@ function App() {
       });
   }, []);
 
+  // Purpose of this function: takes book as a parem and add it to the favorites state.
+  // First I check the edge case: what does it mean?
+  // I check if the book is not in the favorite list yet!
+  // How is the checking working? .some compares the title of each book in favorites with
+  // the title of the current book being added by the user.
+  // If it is in the list it cannot be added twice.
+  // If the book is not already added:
+  // ... create new array containing all existing favorites (if any).
+  // Adds book (which is book being added by the user) at the end of the array.
+  // Updates setFavorites with the new array.
   const addToFavorites = (book) => {
     if (!favorites.some((favorite) => favorite.title === book.title)) {
       setFavorites([...favorites, book]);
     }
   };
 
+  // Purpose of this function: remove a specific book from the favorites array.
+  // updatedFavorites creates a new array by filtering.
+  // This method is used to iterate (loop) though every favorite element of favorites.
+  // Checks if the title of the current favorite does not match the title of the book passed to the function.
+  // Basically, it "excludes" any favorite whose title matches the book's title (Which is the one that the user is clicking on).
+  // Updates setFavorites with the new list.
   const removeFromFavorites = (book) => {
     const updatedFavorites = favorites.filter(
       (favorite) => favorite.title !== book.title
@@ -30,6 +53,11 @@ function App() {
     setFavorites(updatedFavorites);
   };
 
+  // Key takeways of the return:
+  // books.map() iterates over the books array, generating cards for each book.
+  // favorites.map() iterates over favorites, generating cards for each favorite book.
+  // The layout is structured to conditionally render the "Favorites Tab" based on whether there are any books in favorites.
+  // Use bootstrap to create a responsive layout.
   return (
     <div className="App">
       <h1 className="page-title">Hello Reader!</h1>
