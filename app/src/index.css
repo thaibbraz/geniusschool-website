@@ -1,13 +1,55 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* Navbar CSS */
+.custom-navbar {
+  background-color: white; /* White background */
+  width: 1400px; /* Fixed width */
+  height: 89px; /* Fixed height */
+  border-bottom: 1px solid black; /* Black bottom border */
+  opacity: 1; /* Full opacity */
+  margin: 0 auto; /* Center the navbar horizontally */
+}
+
+.container-fluid {
+  display: flex; /* Use flexbox for aligning items */
+  align-items: center; /* Vertically center items */
+  justify-content: space-between; /* Space between items */
+}
+
+.navbar-logo {
+  width: 209px;
+  height: 63px;
+}
+
+.navbar-nav {
+  display: flex; /* Use flexbox for nav items */
+  gap: 32px; /* Space between nav items */
+}
+
+.nav-link {
+  color: black;
+  max-width: 271px;
+  max-height: 24px;
+}
+
+.navbar-button {
+  color: white;
+  background-color: black;
+  padding: 8px 16px; /* Adjust padding for better fit */
+  border: none; /* Remove default button border */
+  cursor: pointer; /* Change cursor to pointer */
+  text-align: center; /* Center text */
+  white-space: nowrap; /* Prevent text from wrapping */
 }

@@ -1,6 +1,12 @@
-import React, { useEffect, useState } from "react";
-import "./App.css";
+import React from "react";
+import Navbar from "./components/Navbar";
 
-function App() {}
+const App = () => {
+  return (
+    <div>
+      <Navbar />
+    </div>
+  );
+};
 
 export default App;
