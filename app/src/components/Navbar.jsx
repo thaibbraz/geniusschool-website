@@ -5,12 +5,12 @@ import logo from "../images/geniusschool-logo.jpeg";
 
 const Navbar = () => {
   return (
-    <div>
-      <nav className="navbar navbar-expand-lg custom-navbar">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            <img className="navbar-logo" src={logo} alt="Genius School Logo" />
-          </a>
+    <nav className="navbar navbar-expand-lg custom-navbar container-fluid">
+      <div className="container-fluid">
+        <a href="#">
+          <img className="navbar-logo" src={logo} alt="Genius School Logo" />
+        </a>
+        <div className="navbar-nav-wrapper">
           <ul className="navbar-nav">
             <li className="nav-item">
               <a className="nav-link" aria-current="page" href="#">
@@ -28,10 +28,10 @@ const Navbar = () => {
               </a>
             </li>
           </ul>
-          <button className="navbar-button">Sign In</button>
         </div>
-      </nav>
-    </div>
+        <button className="navbar-button">Sign In</button>
+      </div>
+    </nav>
   );
 };
 
