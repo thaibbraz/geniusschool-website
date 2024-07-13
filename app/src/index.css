@@ -76,7 +76,7 @@ code {
   height: 156px;
   top: 225px;
   left: 78px;
-  font-family: Dela Gothic One;
+  font-family: "Dela Gothic One", sans-serif;
   font-size: 52px;
   font-weight: 400;
   line-height: 52px;
@@ -97,11 +97,11 @@ code {
   height: 54px;
   top: 429px;
   left: 78px;
-  font-family: DM Sans;
+  color: #000;
+  font-family: "DM Sans", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 27px;
-  color: #000;
 }
 
 .hero-button {
@@ -118,6 +118,7 @@ code {
   cursor: pointer; /* Change cursor to pointer */
   text-align: center; /* Center text */
   white-space: nowrap; /* Prevent text from wrapping */
+  font-family: "DM Sans", sans-serif;
 }
 
 .swirlhero {
@@ -130,13 +131,128 @@ code {
 .about {
   width: 1400px;
   height: 698px;
-  background-color: burlywood;
+}
+
+.illustration-about {
+  position: absolute;
+  width: 528px;
+  height: 528px;
+  top: 958px;
+  left: 80px;
+}
+
+.rectangole-about {
+  background-color: #ffc107;
+  opacity: 50%;
+  position: absolute;
+  width: 574px;
+  height: 327px;
+  top: 1108px;
+  left: -4px;
+  z-index: -1;
+}
+
+.group1-title {
+  position: absolute;
+  width: 472px;
+  height: 24px;
+  top: 1038px;
+  left: 733px;
+  font-family: "Dela Gothic One", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  color: black;
+}
+
+.group1-subheading {
+  position: absolute;
+  width: 548px;
+  height: 40px;
+  top: 1084px;
+  left: 733px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+}
+
+.group2-title {
+  position: absolute;
+  width: 437px;
+  height: 24px;
+  top: 1179px;
+  left: 733px;
+  font-family: "Dela Gothic One", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.group2-subheading {
+  position: absolute;
+  width: 560px;
+  height: 40px;
+  top: 1225px;
+  left: 733px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+}
+
+.group3-title {
+  position: absolute;
+  width: 437px;
+  height: 24px;
+  top: 1320px;
+  left: 733px;
+  font-family: "Dela Gothic One", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.group3-subheading {
+  position: absolute;
+  width: 535px;
+  height: 40px;
+  top: 1366px;
+  left: 733px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
 }
 
 .video {
   width: 1400px;
   height: 851px;
-  background-color: orangered;
+}
+.video-heading {
+  position: absolute;
+  width: 1013px;
+  height: 38px;
+  /* top: 1710px; */
+  left: 80px;
+  font-family: "Dela Gothic One", sans-serif;
+  font-size: 52px;
+  font-weight: 400;
+  line-height: 52px;
+}
+.video-background {
+  position: absolute;
+  width: 1400px;
+  height: 608px;
+  top: 1780px;
+  background-color: #0056b3;
+  z-index: -1;
+}
+
+.video-container {
+  position: absolute;
+  top: 1700px;
+  left: 159px;
 }
 
 .testimonials {
