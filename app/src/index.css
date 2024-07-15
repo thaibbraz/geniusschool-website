@@ -1,15 +1,29 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.heading {
+  font-family: "Dela Gothic One", sans-serif;
+  font-size: 52px;
+  font-weight: 400;
+  line-height: 52px;
+  color: #000;
+}
+
+.title {
+  font-family: "Dela Gothic One", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  color: black;
+}
+
+.subheading {
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  color: #000;
 }
 
 /* Navbar CSS */
@@ -19,13 +33,15 @@ code {
   height: 89px;
   border-bottom: 1px solid black;
   margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .container-fluid {
-  /* background-color: aqua; */
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: space-between; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .navbar-logo {
@@ -65,22 +81,24 @@ code {
   margin-left: 10px;
 }
 
+/* Hero CSS */
 .hero {
   width: 1400px;
   height: 762px;
 }
+.hero-content {
+  width: 1400px;
+  height: 762px;
+  position: absolute;
+  top: -55px;
+}
 
 .hero-heading {
-  position: absolute;
   width: 617px;
   height: 156px;
+  position: absolute;
   top: 225px;
   left: 78px;
-  font-family: "Dela Gothic One", sans-serif;
-  font-size: 52px;
-  font-weight: 400;
-  line-height: 52px;
-  color: #000;
 }
 
 .illustration-hero {
@@ -92,42 +110,39 @@ code {
 }
 
 .hero-subheading {
-  position: absolute;
   width: 669px;
   height: 54px;
+  position: absolute;
   top: 429px;
   left: 78px;
-  color: #000;
-  font-family: "DM Sans", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 27px;
 }
 
 .hero-button {
+  width: 229px;
+  height: 56px;
   position: absolute;
-  background-color: #000;
-  color: white;
-  width: 229px px;
-  height: 56px px;
   top: 531px;
   left: 78px;
+  background-color: #000;
+  color: #ffffff;
   padding: 16px 24px 16px 24px;
   gap: 24px;
-  border: none; /* Remove default button border */
-  cursor: pointer; /* Change cursor to pointer */
-  text-align: center; /* Center text */
-  white-space: nowrap; /* Prevent text from wrapping */
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
   font-family: "DM Sans", sans-serif;
 }
 
 .swirlhero {
-  position: absolute;
   width: 1400px;
   height: 762px;
+  position: absolute;
+  top: 10px;
   z-index: -1;
 }
 
+/* About CSS */
 .about {
   width: 1400px;
   height: 698px;
@@ -137,32 +152,32 @@ code {
   position: absolute;
   width: 528px;
   height: 528px;
-  top: 958px;
+  top: 840px;
   left: 80px;
 }
 
 .rectangole-about {
-  background-color: #ffc107;
-  opacity: 50%;
-  position: absolute;
   width: 574px;
   height: 327px;
-  top: 1108px;
+  position: absolute;
+  top: 1030px;
   left: -4px;
+  background-color: #ffc107;
+  opacity: 50%;
   z-index: -1;
 }
 
-.group1-title {
+.about-paragraphs {
   position: absolute;
+  top: -115px;
+  left: 30px;
+}
+.group1-title {
   width: 472px;
   height: 24px;
+  position: absolute;
   top: 1038px;
   left: 733px;
-  font-family: "Dela Gothic One", sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 24px;
-  color: black;
 }
 
 .group1-subheading {
@@ -171,10 +186,6 @@ code {
   height: 40px;
   top: 1084px;
   left: 733px;
-  font-family: "DM Sans", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 27px;
 }
 
 .group2-title {
@@ -183,10 +194,6 @@ code {
   height: 24px;
   top: 1179px;
   left: 733px;
-  font-family: "Dela Gothic One", sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 24px;
 }
 
 .group2-subheading {
@@ -195,10 +202,6 @@ code {
   height: 40px;
   top: 1225px;
   left: 733px;
-  font-family: "DM Sans", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 27px;
 }
 
 .group3-title {
@@ -207,10 +210,6 @@ code {
   height: 24px;
   top: 1320px;
   left: 733px;
-  font-family: "Dela Gothic One", sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 24px;
 }
 
 .group3-subheading {
@@ -219,12 +218,9 @@ code {
   height: 40px;
   top: 1366px;
   left: 733px;
-  font-family: "DM Sans", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 27px;
 }
 
+/* Video CSS */
 .video {
   width: 1400px;
   height: 851px;
@@ -235,25 +231,24 @@ code {
   height: 38px;
   /* top: 1710px; */
   left: 80px;
-  font-family: "Dela Gothic One", sans-serif;
-  font-size: 52px;
-  font-weight: 400;
-  line-height: 52px;
 }
 .video-background {
   position: absolute;
   width: 1400px;
-  height: 608px;
-  top: 1792px;
+  height: 611px;
+  /* top: 1792px; */
+  top: 1700px;
   background-color: #0056b3;
   z-index: -1;
 }
 
 .video-container {
   position: absolute;
-  top: 1700px;
+  top: 1600px;
   left: 159px;
 }
+
+/* Testimonial CSS */
 
 /* .testimonials {
   width: 1400px;
@@ -263,7 +258,6 @@ code {
 } */
 
 /* Footer CSS */
-
 .footer {
   width: 1400px;
   height: 397px;

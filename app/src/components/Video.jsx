@@ -3,7 +3,7 @@ import React from "react";
 const Video = () => {
   return (
     <div className="video">
-      <div className="video-heading">Lorem Ipsum</div>
+      <div className="video-heading heading">Lorem Ipsum</div>
       <div className="video-container">
         <iframe
           width="1081.22"

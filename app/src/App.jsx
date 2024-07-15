@@ -29,13 +29,13 @@ const App = () => {
       image: "profile.jpg",
     },
     {
-      text: "I have made significant progress thanks to GeniusSchool.",
+      text: "I have made significant progress thanks to GeniusSchool. The comprehensive curriculum and engaging learning materials provided by GeniusSchool have been instrumental in my journey.",
       name: "Emily Freewoman",
       image: "profile.jpg",
     },
 
     {
-      text: "I am excited to finally start speaking to Americans.",
+      text: "GeniusSchool has truly transformed my language learning journey. Their interactive sessions and expert guidance have boosted my confidence and proficiency.",
       name: "Giulia Cell",
       image: "profile.jpg",
     },
