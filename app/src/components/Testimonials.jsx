@@ -1,115 +1,68 @@
-// import React from "react";
+import React, { useState } from "react";
+import Card from "./Card";
+import arrow from "../images/arrow.png"; // Ensure this path is correct
 
-// const Testimonials = () => {
-//   return (
-//     <div>
-//       <div className="testimonials">This is my Testimonials</div>
-//     </div>
-//   );
-// };
+const Testimonials = ({ testimonials }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-// export default Testimonials;
-import React from "react";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-import {
-  Card,
-  CardContent,
-  CardActions,
-  Typography,
-  Grid,
-  Avatar,
-} from "@mui/material";
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+  };
 
-const testimonials = [
-  {
-    text: "Thanks to GeniusSchool, I've improved my English speaking skills...",
-    name: "Jane Doe",
-    image: "profile.jpg",
-  },
-  {
-    text: "Joining the group sessions at GeniusSchool has been a game-changer...",
-    name: "Jane Doe",
-    image: "profile.jpg",
-  },
-  {
-    text: "Learning English at GeniusSchool has been incredible...",
-    name: "Jane Doe",
-    image: "profile.jpg",
-  },
-  {
-    text: "The teachers are amazing and the lessons are well-structured.",
-    name: "John Smith",
-    image: "profile.jpg",
-  },
-  {
-    text: "I have made significant progress thanks to GeniusSchool.",
-    name: "Emily Johnson",
-    image: "profile.jpg",
-  },
-];
+  const handlePrev = () => {
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length
+    );
+  };
 
-function TestimonialCard({ testimonial }) {
+  const firstIndex = currentIndex;
+  const secondIndex = (currentIndex + 1) % testimonials.length;
+  const thirdIndex = (currentIndex + 2) % testimonials.length;
+
   return (
-    <Card style={{ height: 320, width: 346, margin: "auto" }}>
-      {/* style={{ width: 346, height: 320 }} */}
-      <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
-          {testimonial.text}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Grid container alignItems="center">
-          <Grid item>
-            <Avatar alt={testimonial.name} src={testimonial.image} />
-          </Grid>
-          <Grid item>
-            <Typography variant="subtitle1" style={{ marginLeft: 8 }}>
-              {testimonial.name}
-            </Typography>
-          </Grid>
-        </Grid>
-      </CardActions>
-    </Card>
-  );
-}
-
-const responsive = {
-  superLargeDesktop: {
-    breakpoint: { max: 4000, min: 1024 },
-    items: 3,
-    partialVisibilityGutter: 300,
-  },
-  desktop: {
-    breakpoint: { max: 1024, min: 768 },
-    items: 3,
-    partialVisibilityGutter: 300,
-  },
-  tablet: {
-    breakpoint: { max: 768, min: 464 },
-    items: 2,
-    partialVisibilityGutter: 300,
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-    partialVisibilityGutter: 100,
-  },
-};
-
-export default function Testimonial() {
-  return (
-    <div style={{ maxWidth: 1400 }}>
-      <Carousel
-        responsive={responsive}
-        infinite={true}
-        arrows={true}
-        containerClass="carousel-container"
-      >
-        {testimonials.map((item, i) => (
-          <TestimonialCard key={i} testimonial={item} />
-        ))}
-      </Carousel>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        maxWidth: "1282px",
+        height: "421px",
+        margin: "auto",
+      }}
+    >
+      <button
+        onClick={handlePrev}
+        style={{
+          width: "40px",
+          height: "40px",
+          borderRadius: "50%",
+          background: `url(${arrow}) no-repeat center center`,
+          backgroundSize: "contain", // Keep the aspect ratio intact
+          border: "none",
+          cursor: "pointer",
+          transform: "rotate(0deg)",
+        }}
+      ></button>
+      <div style={{ display: "flex", gap: "20px" }}>
+        <Card testimonial={testimonials[firstIndex]} />
+        <Card testimonial={testimonials[secondIndex]} />
+        <Card testimonial={testimonials[thirdIndex]} />
+      </div>
+      <button
+        onClick={handleNext}
+        style={{
+          width: "40px",
+          height: "40px",
+          borderRadius: "50%",
+          background: `url(${arrow}) no-repeat center center`,
+          backgroundSize: "contain", // Keep the aspect ratio intact
+          border: "none",
+          cursor: "pointer",
+          transform: "rotate(180deg)",
+        }}
+      ></button>
     </div>
   );
-}
+};
+
+export default Testimonials;

@@ -4,7 +4,7 @@ const Video = () => {
   return (
     <div className="video">
       <div className="video-heading">Lorem Ipsum</div>
-      <div class="video-container">
+      <div className="video-container">
         <iframe
           width="1081.22"
           height="608"
