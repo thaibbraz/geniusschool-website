@@ -283,13 +283,31 @@ code {
   height: 63px;
 }
 
-/* .footer-links {
-  display: flex;
-  gap: 24px;
+.footer-links-logo {
   position: absolute;
   left: 59px;
-  top: 3250px; This is for the about us etc
-} */
+  top: 3230px;
+  display: flex;
+  gap: 32px;
+}
+
+.footer-links-logo a {
+  color: #f3f3ff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.footer-divider {
+  width: 1280px;
+  height: 1px;
+  background: #ffffff;
+  opacity: 50%;
+  position: absolute;
+  top: 3280px;
+}
 
 .footer-links {
   display: flex;
@@ -308,8 +326,12 @@ code {
 }
 
 .footer-marker {
-  margin: 0;
   position: absolute;
   top: 3350px;
   left: 1180px;
+  color: white;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
 }

@@ -10,6 +10,12 @@ const Footer = () => {
           src={logoreverse}
           alt="Genius School Logo"
         />
+        <div className="footer-links-logo">
+          <a href="#about-us">About Us</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#contact-us">Contact Us</a>
+        </div>
+        <hr className="footer-divider" />
         <div className="footer-links">
           <a href="#privacy">Privacy Policy</a>
           <a href="#terms">Terms of Service</a>
