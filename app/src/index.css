@@ -14,18 +14,18 @@ code {
 
 /* Navbar CSS */
 .custom-navbar {
-  background-color: white; /* White background */
-  width: 1400px; /* Fixed width */
-  height: 89px; /* Fixed height */
-  border-bottom: 1px solid black; /* Black bottom border */
-  opacity: 1; /* Full opacity */
-  margin: 0 auto; /* Center the navbar horizontally */
+  background-color: white;
+  width: 1400px;
+  height: 89px;
+  border-bottom: 1px solid black;
+  margin: 0 auto;
 }
 
 .container-fluid {
-  display: flex; /* Use flexbox for aligning items */
-  align-items: center; /* Vertically center items */
-  justify-content: space-between; /* Space between items */
+  /* background-color: aqua; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: space-between; */
 }
 
 .navbar-logo {
@@ -36,14 +36,14 @@ code {
 }
 
 .navbar-nav-wrapper {
-  flex-grow: 1; /* Grow to take available space */
+  flex-grow: 1;
   display: flex;
-  justify-content: center; /* Center the nav items */
+  justify-content: center;
 }
 
 .navbar-nav {
-  display: flex; /* Use flexbox for nav items */
-  gap: 32px; /* Space between nav items */
+  display: flex;
+  gap: 32px;
 }
 
 .nav-link {
@@ -55,11 +55,11 @@ code {
 .navbar-button {
   color: white;
   background-color: black;
-  padding: 8px 16px; /* Adjust padding for better fit */
-  border: none; /* Remove default button border */
-  cursor: pointer; /* Change cursor to pointer */
-  text-align: center; /* Center text */
-  white-space: nowrap; /* Prevent text from wrapping */
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
   margin-top: 18px;
   margin-right: 80px;
   margin-left: 10px;
@@ -244,7 +244,7 @@ code {
   position: absolute;
   width: 1400px;
   height: 608px;
-  top: 1780px;
+  top: 1792px;
   background-color: #0056b3;
   z-index: -1;
 }
@@ -255,11 +255,12 @@ code {
   left: 159px;
 }
 
-.testimonials {
+/* .testimonials {
   width: 1400px;
   height: 664px;
+  margin: 0 auto;
   background-color: lightgreen;
-}
+} */
 
 /* Footer CSS */
 
@@ -270,21 +271,45 @@ code {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #000; /* Background color */
+  background-color: #000;
   color: #fff;
   gap: 64px;
 }
 
+.footer-logo {
+  position: absolute;
+  left: 59px;
+  width: 234.92px;
+  height: 63px;
+}
+
+/* .footer-links {
+  display: flex;
+  gap: 24px;
+  position: absolute;
+  left: 59px;
+  top: 3250px; This is for the about us etc
+} */
+
 .footer-links {
   display: flex;
-  gap: 64px;
+  gap: 24px;
+  position: absolute;
+  left: 59px;
+  top: 3350px;
 }
 
 .footer-links a {
-  color: #ccc;
-  text-decoration: none;
+  color: white;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
 }
 
-footer p {
+.footer-marker {
   margin: 0;
+  position: absolute;
+  top: 3350px;
+  left: 1180px;
 }

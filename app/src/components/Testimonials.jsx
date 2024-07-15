@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Card from "./Card";
-import arrow from "../images/arrow.png"; // Ensure this path is correct
-
+import arrow from "../images/arrow.png";
 const Testimonials = ({ testimonials }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -21,46 +20,80 @@ const Testimonials = ({ testimonials }) => {
 
   return (
     <div
+      className="testimonials"
       style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        maxWidth: "1282px",
-        height: "421px",
-        margin: "auto",
+        width: "1400px",
+        // maxWidth: "100%", // Ensures it doesn't exceed the viewport width
+        height: "664px",
+        marginRight: "0px",
+        marginLeft: "0px",
+        border: "1px solid black",
       }}
     >
-      <button
-        onClick={handlePrev}
+      <div
+        className="testimonials-title"
         style={{
-          width: "40px",
-          height: "40px",
-          borderRadius: "50%",
-          background: `url(${arrow}) no-repeat center center`,
-          backgroundSize: "contain", // Keep the aspect ratio intact
-          border: "none",
-          cursor: "pointer",
-          transform: "rotate(0deg)",
+          width: "781px",
+          height: "48px",
+          position: "absolute",
+          top: "2470px",
+          left: "78px",
+          fontFamily: "Dela Gothic One",
+          fontSize: "48px",
+          fontWeight: 400,
+          lineHeight: "48px",
+          color: "black",
         }}
-      ></button>
-      <div style={{ display: "flex", gap: "20px" }}>
-        <Card testimonial={testimonials[firstIndex]} />
-        <Card testimonial={testimonials[secondIndex]} />
-        <Card testimonial={testimonials[thirdIndex]} />
+      >
+        What learners are saying
       </div>
-      <button
-        onClick={handleNext}
+      <div
+        className="testimonials-cards-container"
         style={{
-          width: "40px",
-          height: "40px",
-          borderRadius: "50%",
-          background: `url(${arrow}) no-repeat center center`,
-          backgroundSize: "contain", // Keep the aspect ratio intact
-          border: "none",
-          cursor: "pointer",
-          transform: "rotate(180deg)",
+          position: "absolute",
+          top: "2550px",
+          left: "59px",
+          display: "flex",
+          margin: "0 auto", // Centers the inner div
+          alignItems: "center",
+          justifyContent: "space-between",
+          maxWidth: "1282px",
+          height: "421px",
+          margin: "auto",
         }}
-      ></button>
+      >
+        <button
+          onClick={handlePrev}
+          style={{
+            width: "40px",
+            height: "40px",
+            borderRadius: "50%",
+            background: `url(${arrow}) no-repeat center center`,
+            backgroundSize: "contain",
+            border: "none",
+            cursor: "pointer",
+            transform: "rotate(0deg)",
+          }}
+        ></button>
+        <div style={{ display: "flex", gap: "20px" }}>
+          <Card testimonial={testimonials[firstIndex]} />
+          <Card testimonial={testimonials[secondIndex]} />
+          <Card testimonial={testimonials[thirdIndex]} />
+        </div>
+        <button
+          onClick={handleNext}
+          style={{
+            width: "40px",
+            height: "40px",
+            borderRadius: "50%",
+            background: `url(${arrow}) no-repeat center center`,
+            backgroundSize: "contain",
+            border: "none",
+            cursor: "pointer",
+            transform: "rotate(180deg)",
+          }}
+        ></button>
+      </div>
     </div>
   );
 };

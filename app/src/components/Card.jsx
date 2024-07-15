@@ -46,7 +46,7 @@ const Card = ({ testimonial }) => {
             height: "48px",
             borderRadius: "50%",
             backgroundColor: "white",
-            marginRight: "20px", // Adjust spacing as needed
+            marginRight: "20px",
           }}
         >
           <img
