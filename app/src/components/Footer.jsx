@@ -16,12 +16,12 @@ const Footer = () => {
           <a href="#contact-us">Contact Us</a>
         </div>
         <hr className="footer-divider" />
-        <div className="footer-links">
+        <div className="footer-links sm-text">
           <a href="#privacy">Privacy Policy</a>
           <a href="#terms">Terms of Service</a>
           <a href="#cookies">Cookies Settings</a>
         </div>
-        <p className="footer-marker">©2024 Genius School</p>
+        <p className="footer-marker sm-text">©2024 Genius School</p>
       </footer>
     </div>
   );

@@ -26,6 +26,14 @@ body {
   color: #000;
 }
 
+.sm-text {
+  color: white;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
 /* Navbar CSS */
 .custom-navbar {
   background-color: white;
@@ -249,13 +257,60 @@ body {
 }
 
 /* Testimonial CSS */
-
-/* .testimonials {
+.testimonials {
   width: 1400px;
   height: 664px;
+  margin-right: 0px;
+  margin-left: 0px;
+  border: 1px solid black;
+}
+
+.testimonials-title {
+  width: 781px;
+  height: 48px;
+  position: absolute;
+  top: 2410px;
+  left: 78px;
+  font-family: "Dela Gothic One";
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 48px;
+  color: black;
+}
+
+.testimonials-carousel-container {
+  max-width: 1282px;
+  height: 421px;
+  position: absolute;
+  top: 2550px;
+  left: 59px;
+  display: flex;
   margin: 0 auto;
-  background-color: lightgreen;
-} */
+  align-items: center;
+  justify-content: space-between;
+}
+
+.testimonials-card-container {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 105px;
+}
+
+.testimonials-button-prev,
+.testimonials-button-next {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: no-repeat center center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 105px;
+}
+
+.testimonials-button-next {
+  transform: rotate(180deg);
+}
 
 /* Footer CSS */
 .footer {
@@ -271,16 +326,16 @@ body {
 }
 
 .footer-logo {
-  position: absolute;
-  left: 59px;
   width: 234.92px;
   height: 63px;
+  position: absolute;
+  left: 59px;
 }
 
 .footer-links-logo {
   position: absolute;
   left: 59px;
-  top: 3230px;
+  top: 3150px;
   display: flex;
   gap: 32px;
 }
@@ -300,7 +355,7 @@ body {
   background: #ffffff;
   opacity: 50%;
   position: absolute;
-  top: 3280px;
+  top: 3200px;
 }
 
 .footer-links {
@@ -308,7 +363,7 @@ body {
   gap: 24px;
   position: absolute;
   left: 59px;
-  top: 3350px;
+  top: 3270px;
 }
 
 .footer-links a {
@@ -321,11 +376,6 @@ body {
 
 .footer-marker {
   position: absolute;
-  top: 3350px;
+  top: 3270px;
   left: 1180px;
-  color: white;
-  font-family: "DM Sans", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 21px;
 }

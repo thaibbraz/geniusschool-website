@@ -52,17 +52,17 @@ const Navbar = () => {
         <div className="navbar-nav-wrapper">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#">
+              <a className="nav-link" aria-current="page" href="#about-us">
                 About Us
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="#pricing">
                 Pricing
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="#contact-us">
                 Contact Us
               </a>
             </li>
