@@ -1,6 +1,6 @@
 import React from "react";
-import illustrationhero from "../images/illustrationhero.png";
-import swirlhero from "../images/swirlhero.png";
+import illustrationhero from "../../images/illustrationhero.png";
+import swirlhero from "../../images/swirlhero.png";
 
 const Hero = () => {
   return (

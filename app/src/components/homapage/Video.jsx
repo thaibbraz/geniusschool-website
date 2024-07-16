@@ -9,9 +9,9 @@ const Video = () => {
           width="1081.22"
           height="608"
           src="https://www.youtube.com/embed/PZt1vnxonJk"
-          frameborder="0"
+          // frameBorder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
       </div>
       <div className="video-background"></div>

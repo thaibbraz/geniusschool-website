@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Card from "./Card";
-import arrow from "../images/arrow.png";
+import arrow from "../../images/arrow.png";
 
 const Testimonials = ({ testimonials }) => {
   const [currentIndex, setCurrentIndex] = useState(0);

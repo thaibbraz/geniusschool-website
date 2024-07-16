@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  height: 100%;
+  min-height: 100%;
 }
 
 .heading {
@@ -314,6 +316,7 @@ body {
 
 /* Footer CSS */
 .footer {
+  /* width: 100%; */
   width: 1400px;
   height: 397px;
   padding: 80px 60px;
@@ -338,6 +341,7 @@ body {
   top: 3150px;
   display: flex;
   gap: 32px;
+  z-index: 1;
 }
 
 .footer-links-logo a {
@@ -377,5 +381,119 @@ body {
 .footer-marker {
   position: absolute;
   top: 3270px;
+  left: 1180px;
+}
+
+/* Learning plan CSS */
+.learningplan {
+  width: 1400px;
+  height: 1192px;
+  background-color: palegreen;
+}
+
+/* Custom plan CSS */
+.customplan {
+  background-color: plum;
+  width: 1400px;
+  height: 228px;
+  position: absolute;
+  top: 1192px;
+}
+
+.compareplans {
+  background-color: purple;
+  width: 1400px;
+  height: 228px;
+  position: absolute;
+  top: 1420px;
+}
+/* Compare plan CSS */
+
+/* FAQ CSS */
+.FAQ-frame {
+  width: 1400px;
+  height: 712px;
+  position: absolute;
+  top: 1648px;
+  background-color: #0056b3;
+}
+
+.FAQ-heading {
+  /* color: #ffffff; */
+  color: red;
+  width: 487px;
+  height: 142px;
+  top: 1806px;
+  left: 80px;
+  position: absolute;
+}
+
+/* Footerpricing CSS */
+.footerpricing {
+  width: 1400px;
+  height: 397px;
+  padding: 80px 60px;
+  gap: 64px;
+  background-color: #000;
+  position: absolute;
+  top: 2360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+.footerpricing-logo {
+  width: 234.92px;
+  height: 63px;
+  position: absolute;
+  left: 59px;
+}
+
+.footerpricing-links-logo {
+  position: absolute;
+  left: 59px;
+  top: 175px;
+  display: flex;
+  gap: 32px;
+}
+
+.footerpricing-links-logo a {
+  text-decoration: none;
+  color: #f3f3ff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.footerpricing-divider {
+  width: 1280px;
+  height: 1px;
+  background: #ffffff;
+  opacity: 50%;
+  position: absolute;
+  top: 225px;
+}
+
+.footerpricing-links {
+  display: flex;
+  gap: 24px;
+  position: absolute;
+  left: 59px;
+  top: 295px;
+}
+
+.footerpricing-links a {
+  color: white;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.footerpricing-marker {
+  position: absolute;
+  top: 295px;
   left: 1180px;
 }
