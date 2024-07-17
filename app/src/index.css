@@ -388,7 +388,80 @@ body {
 .learningplan {
   width: 1400px;
   height: 1192px;
-  background-color: palegreen;
+}
+
+.learningplan-heading {
+  width: 781px;
+  height: 48px;
+  position: absolute;
+  top: 185px;
+  left: 310px;
+  color: #000;
+  font-family: "Dela Gothic One", sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 48px;
+  text-align: center;
+}
+
+.card-size {
+  width: 346px;
+  height: 946px;
+  border: 1px solid black;
+}
+
+.groupclasses-card {
+  position: absolute;
+  top: 313px;
+  left: 141px;
+}
+
+.groupclasses-card-title {
+  width: 283px;
+  height: 24px;
+  position: absolute;
+  top: 28px;
+  left: 24px;
+}
+.groupclasses-card-title-rectangle {
+  width: 346px;
+  height: 80px;
+  border: 1px 0px 0px 0px;
+  background-color: #ffc107;
+  opacity: 25%;
+}
+
+.groupclasses-card-title-line {
+  width: 346px;
+  border: 1px solid black;
+  position: absolute;
+  top: 80px;
+}
+
+.groupclasses-card-title-price {
+  width: 346px;
+  height: 35px;
+  position: absolute;
+  top: 129px;
+  font-family: "Dela Gothic One", sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 48px;
+  text-align: center;
+}
+
+.groupclasses-card-title-pricetext {
+  width: 346px;
+  height: 40px;
+
+  position: absolute;
+  top: 188px;
+  text-align: center;
+}
+
+.groupclasses-card-title-pricetext .annually,
+.groupclasses-card-title-pricetext .monthly {
+  display: block;
 }
 
 /* Custom plan CSS */
