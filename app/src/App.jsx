@@ -8,7 +8,6 @@ import Testimonials from "./components/homapage/Testimonials";
 import Footer from "./components/homapage/Footer";
 import Learningplan from "./components/pricing/Learningplan";
 import Customplan from "./components/pricing/Customplan";
-import Compareplans from "./components/pricing/Compareplans";
 import FAQ from "./components/pricing/FAQ";
 import Footerpricing from "./components/pricing/Footerpricing";
 
@@ -55,7 +54,9 @@ const App = () => {
           element={
             <>
               <Hero />
-              <About />
+              <section id="about-us">
+                <About />
+              </section>
               <Video />
               <Testimonials testimonials={testimonials} />
               <Footer />
@@ -68,7 +69,6 @@ const App = () => {
             <>
               <Learningplan />
               <Customplan />
-              {/* <Compareplans /> */}
               <FAQ />
               <Footerpricing />
             </>

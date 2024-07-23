@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import logoreverse from "../../images/geniusschool-logo-reverse.jpeg";
 import { format } from "date-fns";
 
@@ -8,15 +10,25 @@ const Footer = () => {
     <footer className="footer">
       <img className="footer-logo" src={logoreverse} alt="Genius School Logo" />
       <div className="footer-links-logo">
-        <a href="#about-us">About Us</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#contact-us">Contact Us</a>
+        <HashLink smooth to="/#about-us">
+          About Us
+        </HashLink>
+        <Link to="/pricing">Pricing</Link>
+        <HashLink smooth to="/#contact-us">
+          Contact Us
+        </HashLink>
       </div>
       <hr className="footer-divider" />
       <div className="footer-links sm-text">
-        <a href="#privacy">Privacy Policy</a>
-        <a href="#terms">Terms of Service</a>
-        <a href="#cookies">Cookies Settings</a>
+        <HashLink smooth to="/#privacy">
+          Privacy Policy
+        </HashLink>
+        <HashLink smooth to="/#terms">
+          Terms of Service
+        </HashLink>
+        <HashLink smooth to="/#cookies">
+          Cookies Settings
+        </HashLink>
       </div>
       <p className="footer-marker sm-text">©{currentYear} Genius School</p>
     </footer>
