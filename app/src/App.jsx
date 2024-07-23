@@ -68,7 +68,7 @@ const App = () => {
             <>
               <Learningplan />
               <Customplan />
-              <Compareplans />
+              {/* <Compareplans /> */}
               <FAQ />
               <Footerpricing />
             </>
