@@ -514,7 +514,7 @@ body {
   width: 1400px;
   height: 228px;
   position: absolute;
-  top: 1401px;
+  top: 1350px;
 }
 
 .customplan-vector {
@@ -581,13 +581,46 @@ body {
 }
 
 .FAQ-heading {
-  /* color: #ffffff; */
-  color: red;
   width: 487px;
   height: 142px;
-  top: 1806px;
+  top: 90px;
   left: 80px;
   position: absolute;
+  color: #ffffff;
+}
+
+.FAQ-content {
+  position: relative;
+  top: 110px;
+  left: 640px;
+  width: 620px;
+}
+
+.FAQ-line {
+  width: 620px;
+  height: 0;
+  border-top: 1px solid white;
+  opacity: 50%;
+  margin-bottom: 10px;
+}
+
+.FAQ-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.FAQ-plus-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.FAQ-answer {
+  color: white;
+  margin-bottom: 20px;
 }
 
 /* Footerpricing CSS */
