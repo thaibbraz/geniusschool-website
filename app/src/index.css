@@ -411,7 +411,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 100px;
-  padding: 0 50px; /* Add padding to the left and right for spacing */
+  padding: 0 50px;
   position: relative;
 }
 
@@ -618,8 +618,8 @@ body {
   position: absolute;
   top: 1648px;
   background-color: #0056b3;
-  margin: 0 auto; /* Center the frame */
-  padding: 20px; /* Add some padding for better spacing */
+  margin: 0 auto;
+  padding: 20px;
   box-sizing: border-box;
 }
 
@@ -668,12 +668,42 @@ body {
   margin-bottom: 20px;
 }
 
-/* Footerpricing CSS */
+@media (max-width: 1200px) {
+  .FAQ-content {
+    left: calc(50% + 100px);
+    top: 90px;
+  }
+}
+
+@media (max-width: 992px) {
+  .FAQ-content {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .FAQ-content {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  .FAQ-content {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 40px;
+  }
+}
+
+/* Footer Pricing CSS */
 .footerpricing {
-  width: 1400px;
+  width: 100%;
   height: 397px;
   padding: 80px 60px;
-  gap: 64px;
   background-color: #000;
   position: absolute;
   top: 2360px;
@@ -681,19 +711,21 @@ body {
   flex-direction: column;
   align-items: center;
   color: #fff;
+  box-sizing: border-box;
 }
 
 .footerpricing-logo {
   width: 234.92px;
   height: 63px;
   position: absolute;
-  left: 59px;
+  top: 140px; /* Adjust as needed to align with the divider */
+  left: 4%; /* Align with the start of the divider */
 }
 
 .footerpricing-links-logo {
   position: absolute;
-  left: 59px;
-  top: 175px;
+  top: 175px; /* Adjust as needed to align with the divider */
+  left: 4%; /* Align with the start of the divider */
   display: flex;
   gap: 32px;
 }
@@ -708,20 +740,22 @@ body {
 }
 
 .footerpricing-divider {
-  width: 1280px;
+  width: 92%;
   height: 1px;
   background: #ffffff;
   opacity: 50%;
   position: absolute;
   top: 225px;
+  left: 4%;
 }
 
 .footerpricing-links {
   display: flex;
   gap: 24px;
   position: absolute;
-  left: 59px;
-  top: 295px;
+  top: 295px; /* Adjust as needed to align with the divider */
+  left: 4%; /* Align with the start of the divider */
+  flex-wrap: wrap;
 }
 
 .footerpricing-links a {
@@ -734,6 +768,33 @@ body {
 
 .footerpricing-marker {
   position: absolute;
-  top: 295px;
-  left: 1180px;
+  top: 295px; /* Adjust as needed to align with the divider */
+  right: 4%; /* Align with the end of the divider */
+}
+
+@media (max-width: 768px) {
+  .footerpricing {
+    padding: 40px 20px; /* Adjust padding for smaller screens */
+    height: auto; /* Allow height to adjust for smaller screens */
+  }
+
+  .footerpricing-logo,
+  .footerpricing-links-logo,
+  .footerpricing-links,
+  .footerpricing-marker {
+    position: static; /* Reset positioning for smaller screens */
+    margin: 0 auto 32px auto; /* Center elements and add spacing */
+    text-align: center;
+  }
+
+  .footerpricing-links-logo,
+  .footerpricing-links {
+    flex-direction: column; /* Stack items vertically */
+    gap: 16px; /* Reduce gap for smaller screens */
+  }
+
+  .footerpricing-divider {
+    width: 100%; /* Make divider full width */
+    margin: 0 auto 32px auto; /* Center the divider and add spacing */
+  }
 }
