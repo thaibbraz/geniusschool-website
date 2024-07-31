@@ -1,37 +1,35 @@
 import React from "react";
-import info from "../../images/info.png";
 
 const Card = ({ title, price, pricetext, description, includes, bgColor }) => {
   const handleClick = () => {
     window.location.href = "https://stripe.com/gb";
   };
   return (
-    <div className="card">
-      <div className="card-title title" style={{ backgroundColor: bgColor }}>
-        {title}
+    <div className="card-wrapper">
+      <div className="card">
+        <div className="card-title title" style={{ backgroundColor: bgColor }}>
+          {title}
+        </div>
+        <div className="card-price">
+          €{price} <span className="card-price-monthly title">/mo</span>
+        </div>
+        <div className="card-pricetext">
+          {pricetext.map((text, index) => (
+            <div key={index}>{text}</div>
+          ))}
+        </div>
+        <div className="card-line"></div>
+        <div className="card-description">{description}</div>
+        <button className="card-button" onClick={handleClick}>
+          GET STARTED
+        </button>
+        <div className="card-including">INCLUDING</div>
+        <ul className="card-list">
+          {includes.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
       </div>
-      <div className="card-price">
-        €{price} <span className="card-price-monthly title">/mo</span>
-      </div>
-      <div className="card-pricetext">
-        {pricetext.map((text, index) => (
-          <div key={index}>{text}</div>
-        ))}
-      </div>
-      <div className="card-line"></div>
-      <div className="card-description">{description}</div>
-      <button className="card-button" onClick={handleClick}>
-        GET STARTED
-      </button>
-      <div className="card-including">INCLUDING</div>
-      <ul className="card-list">
-        {includes.map((item, index) => (
-          <li key={index}>
-            {item}
-            <img src={info} alt="Info" className="info-icon" />
-          </li>
-        ))}
-      </ul>
     </div>
   );
 };
