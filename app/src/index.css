@@ -390,10 +390,9 @@ body {
 /* Learning plan CSS */
 .learningplan {
   width: 100%;
-  /* height: 1192px; */
-  height: auto; /* Adjust height to auto for better responsiveness */
-  margin: 0 auto; /* Added */
-  padding: 50px 0; /* Add padding to the top and bottom */
+  height: auto;
+  margin: 0 auto;
+  padding: 50px 0;
 }
 
 .learningplan-heading {
@@ -404,7 +403,7 @@ body {
   font-weight: 400;
   line-height: 48px;
   text-align: center;
-  margin: 120px auto; /* Center heading and add margin for spacing */
+  margin: 120px auto;
 }
 
 .learningplan-card-container {
@@ -430,8 +429,8 @@ body {
   border-radius: 0;
   padding: 100px 20px 20px 20px;
   transition: transform 0.3s ease-in-out;
-  background-color: white; /* Ensure card background is white */
-  z-index: 1; /* Ensure card is above pseudo-element */
+  background-color: white;
+  z-index: 1;
 }
 
 .card-wrapper::before {
@@ -442,25 +441,21 @@ body {
   width: 100%;
   height: 100%;
   background-color: black;
-  z-index: 0; /* Place pseudo-element behind the card */
+  z-index: 0;
   transition: all 0.3s ease-in-out;
   opacity: 0;
 }
 
-/* Hover effect moving card to the right */
 .card-wrapper:hover .card {
   transform: translate(
     10px,
     -10px
-  ); /* Lift the card slightly and move to the right */
+  ); /* Lift the card slightly and move to the right, we can adjust it */
 }
 
 .card-wrapper:hover::before {
-  opacity: 1; /* Show the black rectangle on hover */
-  transform: translate(
-    -4px,
-    4px
-  ); /* Adjust position to create the shadow effect */
+  opacity: 1;
+  transform: translate(-4px, 4px);
 }
 
 .card-title {
@@ -539,73 +534,93 @@ body {
 
 /* Custom plan CSS */
 .customplan {
-  width: 1400px;
-  height: 228px;
+  width: 100%;
+  height: 228px; /* Fixed height as per original */
   position: absolute;
-  top: 1350px;
+  top: 1350px; /* Same vertical position as original */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .customplan-vector {
-  width: 1398px;
-  height: 228px;
-  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  margin: 0 auto;
 }
 
 .customplan-box {
-  width: 1118px;
+  width: 100%;
+  max-width: 1118px;
   height: 189px;
-  position: absolute;
-  top: 34px;
-  left: 141px;
   border: 1px solid black;
   background-color: #fff;
+  position: absolute;
+  top: 34px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  padding: 20px;
 }
 
 .customplan-box-line {
-  width: 1118px;
+  width: 100%;
   height: 0px;
-  position: absolute;
-  top: 70px;
-  /* left: 141px; */
   border: 1px solid black;
   background-color: #fff;
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .customplan-box-title {
   color: black;
-  width: 432.23px;
+  width: 100%;
+  max-width: 432.23px;
   height: 24px;
   position: absolute;
   top: 23px;
-  left: 40px;
+  left: 50px; /* Adjusted for better positioning */
+}
+
+.customplan-box-text,
+.customplan-box-text-request {
+  position: absolute;
+  white-space: nowrap;
 }
 
 .customplan-box-text {
   color: black;
-  height: 116px;
-  position: absolute;
+  width: 100%;
+  max-width: 223px;
+  text-align: center;
   top: 150px;
-  left: 160px;
+  left: calc(50% - 510px); /* Adjusted for better positioning */
 }
 
 .customplan-box-text-request {
-  color: black;
-  width: 223px;
-  height: 116px;
-  position: absolute;
-  top: 150px;
-  left: 450px;
   color: #0056b3;
+  width: 100%;
+  max-width: 223px;
+  text-align: center;
   text-decoration: none;
+  font-weight: 800;
+  top: 150px;
+  left: calc(50% - 220px); /* Adjusted for better positioning */
 }
 
 /* FAQ CSS */
 .FAQ-frame {
-  width: 1400px;
+  width: 100%;
   height: 712px;
   position: absolute;
   top: 1648px;
   background-color: #0056b3;
+  margin: 0 auto; /* Center the frame */
+  padding: 20px; /* Add some padding for better spacing */
+  box-sizing: border-box;
 }
 
 .FAQ-heading {
@@ -615,13 +630,14 @@ body {
   left: 80px;
   position: absolute;
   color: #ffffff;
+  left: calc(50% - 800px);
 }
 
 .FAQ-content {
   position: relative;
+  max-width: 620px;
   top: 110px;
-  left: 640px;
-  width: 620px;
+  left: calc(50% + 100px);
 }
 
 .FAQ-line {
@@ -639,6 +655,7 @@ body {
   color: white;
   cursor: pointer;
   margin-bottom: 10px;
+  max-width: 620px;
 }
 
 .FAQ-plus-icon {

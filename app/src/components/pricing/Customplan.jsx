@@ -14,7 +14,7 @@ const Customplan = () => {
       </div>
       <div>
         <a
-          href="mailto:geniusschool@geniusschool.com?subject=Requesting%20a%20Custom%20Plan"
+          href="mailto:thiago@geniuschool.com?subject=Requesting%20a%20Custom%20Plan"
           className="customplan-box-text-request subheading"
         >
           REQUEST A QUOTE

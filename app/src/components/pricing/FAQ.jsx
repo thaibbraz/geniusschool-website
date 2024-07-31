@@ -25,10 +25,10 @@ const FAQ = () => {
     <>
       Yes. Send us an email to{" "}
       <a
-        href="mailto:geniusschool@geniusschool.com?subject=Requesting%20a%20Custom%20Plan"
+        href="mailto:thiago@geniuschool.com?subject=Requesting%20a%20Custom%20Plan"
         style={{ color: "white", textDecoration: "underline" }}
       >
-        geniusschool@geniusschool.com
+        thiago@geniuschool.com
       </a>
     </>,
     "Any level is welcome",
