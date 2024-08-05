@@ -46,6 +46,7 @@ body {
   border-bottom: 1px solid black;
   margin: 0 auto;
   position: absolute;
+  z-index: 1000;
 }
 
 .container-fluid {
@@ -93,13 +94,11 @@ body {
 
 /* Hero CSS */
 .hero {
-  width: 1400px;
-  /* width: 100%; */
+  width: 100%;
   height: 762px;
 }
 .hero-content {
-  width: 1400px;
-  /* width: 100%; */
+  width: 100%;
   height: 762px;
   position: absolute;
   top: -55px;
@@ -147,7 +146,7 @@ body {
 }
 
 .swirlhero {
-  width: 1400px;
+  width: 100%;
   height: 762px;
   position: absolute;
   top: 10px;
@@ -156,8 +155,11 @@ body {
 
 /* About CSS */
 .about {
-  width: 1400px;
+  width: 100%;
   height: 698px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .illustration-about {
@@ -169,13 +171,12 @@ body {
 }
 
 .rectangole-about {
-  width: 574px;
+  width: 100%;
   height: 327px;
   position: absolute;
   top: 1030px;
   left: -4px;
-  background-color: #ffc107;
-  opacity: 50%;
+  background-color: #ffc109;
   z-index: -1;
 }
 
@@ -234,64 +235,82 @@ body {
 
 /* Video CSS */
 .video {
-  width: 1400px;
+  width: 100%;
   height: 851px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
+
 .video-heading {
-  position: absolute;
   width: 1013px;
   height: 38px;
-  /* top: 1710px; */
-  left: 80px;
+  margin-bottom: 80px;
+  margin-left: -500px;
 }
+
 .video-background {
-  position: absolute;
-  width: 1400px;
+  width: 100%;
   height: 611px;
-  /* top: 1792px; */
-  top: 1700px;
   background-color: #0056b3;
   z-index: -1;
+  position: absolute;
+  top: 240px;
 }
 
 .video-container {
-  position: absolute;
-  top: 1600px;
-  left: 159px;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  z-index: 1;
 }
 
-/* Testimonial CSS */
+@media (max-width: 768px) {
+  .video-heading {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .video-container {
+    padding: 0 20px;
+  }
+}
+
+/* Testimonials CSS */
 .testimonials {
-  width: 1400px;
+  width: 100%;
   height: 664px;
-  margin-right: 0px;
-  margin-left: 0px;
+  margin: 0 auto;
   border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .testimonials-title {
   width: 781px;
   height: 48px;
-  position: absolute;
-  top: 2410px;
-  left: 78px;
   font-family: "Dela Gothic One";
   font-size: 48px;
   font-weight: 400;
   line-height: 48px;
   color: black;
+  margin-top: 120px;
+  margin-left: -500px;
+  margin-bottom: 60px;
 }
 
 .testimonials-carousel-container {
   max-width: 1282px;
   height: 421px;
-  position: absolute;
-  top: 2550px;
-  left: 59px;
   display: flex;
-  margin: 0 auto;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .testimonials-card-container {
@@ -316,31 +335,57 @@ body {
   transform: rotate(180deg);
 }
 
+@media (max-width: 768px) {
+  .testimonials-title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px; /* Adjust spacing as needed */
+  }
+
+  .testimonials-carousel-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonials-card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonials-button-prev,
+  .testimonials-button-next {
+    margin-bottom: 20px; /* Adjust spacing as needed */
+  }
+}
+
 /* Footer CSS */
 .footer {
-  /* width: 100%; */
-  width: 1400px;
+  width: 100%;
   height: 397px;
   padding: 80px 60px;
+  gap: 64px;
+  background-color: #000;
+  position: absolute;
+  top: 2975px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #000;
   color: #fff;
-  gap: 64px;
+  box-sizing: border-box;
 }
 
 .footer-logo {
   width: 234.92px;
   height: 63px;
   position: absolute;
-  left: 59px;
+  top: 70px;
+  left: 4%;
 }
 
 .footer-links-logo {
   position: absolute;
-  left: 59px;
-  top: 3150px;
+  top: 175px;
+  left: 4%;
   display: flex;
   gap: 32px;
   z-index: 1;
@@ -356,20 +401,22 @@ body {
 }
 
 .footer-divider {
-  width: 1280px;
+  width: 92%;
   height: 1px;
   background: #ffffff;
   opacity: 50%;
   position: absolute;
-  top: 3200px;
+  top: 225px;
+  left: 4%;
 }
 
 .footer-links {
   display: flex;
   gap: 24px;
   position: absolute;
-  left: 59px;
-  top: 3270px;
+  top: 295px;
+  left: 4%;
+  flex-wrap: wrap;
 }
 
 .footer-links a {
@@ -382,8 +429,35 @@ body {
 
 .footer-marker {
   position: absolute;
-  top: 3270px;
-  left: 1180px;
+  top: 295px;
+  right: 4%;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 20px; /* Adjust padding for smaller screens */
+    height: auto; /* Allow height to adjust for smaller screens */
+  }
+
+  .footer-logo,
+  .footer-links-logo,
+  .footer-links,
+  .footer-marker {
+    position: static; /* Reset positioning for smaller screens */
+    margin: 0 auto 32px auto; /* Center elements and add spacing */
+    text-align: center;
+  }
+
+  .footer-links-logo,
+  .footer-links {
+    flex-direction: column; /* Stack items vertically */
+    gap: 16px; /* Reduce gap for smaller screens */
+  }
+
+  .footer-divider {
+    width: 100%; /* Make divider full width */
+    margin: 0 auto 32px auto; /* Center the divider and add spacing */
+  }
 }
 
 /* Pricing Page */
@@ -704,6 +778,7 @@ body {
   width: 100%;
   height: 397px;
   padding: 80px 60px;
+  gap: 64px; /* added */
   background-color: #000;
   position: absolute;
   top: 2360px;
@@ -718,14 +793,14 @@ body {
   width: 234.92px;
   height: 63px;
   position: absolute;
-  top: 140px; /* Adjust as needed to align with the divider */
-  left: 4%; /* Align with the start of the divider */
+  top: 70px;
+  left: 4%;
 }
 
 .footerpricing-links-logo {
   position: absolute;
-  top: 175px; /* Adjust as needed to align with the divider */
-  left: 4%; /* Align with the start of the divider */
+  top: 175px;
+  left: 4%;
   display: flex;
   gap: 32px;
 }
@@ -753,8 +828,8 @@ body {
   display: flex;
   gap: 24px;
   position: absolute;
-  top: 295px; /* Adjust as needed to align with the divider */
-  left: 4%; /* Align with the start of the divider */
+  top: 295px;
+  left: 4%;
   flex-wrap: wrap;
 }
 
@@ -768,33 +843,6 @@ body {
 
 .footerpricing-marker {
   position: absolute;
-  top: 295px; /* Adjust as needed to align with the divider */
-  right: 4%; /* Align with the end of the divider */
-}
-
-@media (max-width: 768px) {
-  .footerpricing {
-    padding: 40px 20px; /* Adjust padding for smaller screens */
-    height: auto; /* Allow height to adjust for smaller screens */
-  }
-
-  .footerpricing-logo,
-  .footerpricing-links-logo,
-  .footerpricing-links,
-  .footerpricing-marker {
-    position: static; /* Reset positioning for smaller screens */
-    margin: 0 auto 32px auto; /* Center elements and add spacing */
-    text-align: center;
-  }
-
-  .footerpricing-links-logo,
-  .footerpricing-links {
-    flex-direction: column; /* Stack items vertically */
-    gap: 16px; /* Reduce gap for smaller screens */
-  }
-
-  .footerpricing-divider {
-    width: 100%; /* Make divider full width */
-    margin: 0 auto 32px auto; /* Center the divider and add spacing */
-  }
+  top: 295px;
+  right: 4%;
 }

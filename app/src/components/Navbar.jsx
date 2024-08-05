@@ -14,7 +14,7 @@ const Navbar = () => {
         <div className="navbar-nav-wrapper">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link" aria-current="page" to="/about-us">
+              <Link className="nav-link" aria-current="page" to="/">
                 About Us
               </Link>
             </li>
@@ -24,9 +24,12 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/contact-us">
+              <a
+                className="nav-link"
+                href={`mailto:thiago@geniuschool.com?subject=Contact%20Us`}
+              >
                 Contact Us
-              </Link>
+              </a>
             </li>
           </ul>
         </div>

@@ -6,6 +6,11 @@ import { HashLink } from "react-router-hash-link";
 
 const Footerpricing = () => {
   const currentYear = format(new Date(), "yyyy");
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <footer className="footerpricing">
       <Link to="/">
@@ -19,10 +24,12 @@ const Footerpricing = () => {
         <HashLink smooth to="/#about-us">
           About Us
         </HashLink>
-        <Link to="/pricing">Pricing</Link>
-        <HashLink smooth to="/#contact-us">
+        <Link to="/pricing" onClick={scrollToTop}>
+          Pricing
+        </Link>
+        <a href="mailto:thiago@geniuschool.com?subject=Contact%20Us">
           Contact Us
-        </HashLink>
+        </a>
       </div>
       <hr className="footerpricing-divider" />
       <div className="footerpricing-links sm-text">
