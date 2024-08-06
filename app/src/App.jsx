@@ -57,7 +57,9 @@ const App = () => {
               <section id="about-us">
                 <About />
               </section>
-              <Video />
+              <section id="video-section">
+                <Video />
+              </section>
               <Testimonials testimonials={testimonials} />
               <Footer />
             </>

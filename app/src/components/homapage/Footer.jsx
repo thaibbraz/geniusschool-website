@@ -13,10 +13,15 @@ const Footer = () => {
         <HashLink smooth to="/#about-us">
           About Us
         </HashLink>
-        <Link to="/pricing">Pricing</Link>
-        <HashLink smooth to="/#contact-us">
+        <Link to="/pricing" onClick={() => window.scrollTo(0, 0)}>
+          Pricing
+        </Link>
+        <a
+          className="nav-link"
+          href={`mailto:thiago@geniuschool.com?subject=Contact%20Us`}
+        >
           Contact Us
-        </HashLink>
+        </a>
       </div>
       <hr className="footer-divider" />
       <div className="footer-links sm-text">

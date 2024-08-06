@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import logo from "../images/geniusschool-logo.jpeg";
 
 const Navbar = () => {
@@ -14,9 +14,14 @@ const Navbar = () => {
         <div className="navbar-nav-wrapper">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link" aria-current="page" to="/">
+              <HashLink
+                smooth
+                className="nav-link"
+                aria-current="page"
+                to="/#video-section"
+              >
                 About Us
-              </Link>
+              </HashLink>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/pricing">
